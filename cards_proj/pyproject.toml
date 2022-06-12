@@ -1,0 +1,41 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "cards"
+authors = [{name = "Brian Okken", email = "brian+pypi@pythontest.com"}]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python=">=3.7"
+dynamic = ["version", "description"]
+dependencies = [
+    "tinydb==4.5.1",
+    "typer==0.3.2",
+    "rich==10.7.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "faker",
+    "tox",
+    "coverage",
+    "pytest-cov",
+]
+
+[project.urls]
+Home = "https://github.com/okken/cards"
+
+[project.scripts]
+cards = "cards:app"
+
+[tool.black]
+line-length = 88
