@@ -17,9 +17,9 @@ classifiers = [
 requires-python=">=3.7"
 dynamic = ["version", "description"]
 dependencies = [
-    "tinydb==4.5.1",
-    "typer==0.3.2",
-    "rich==10.7.0"
+    "tinydb==4.7.0",
+    "typer==0.4.1",
+    "rich==12.4.4"
 ]
 
 [project.optional-dependencies]
