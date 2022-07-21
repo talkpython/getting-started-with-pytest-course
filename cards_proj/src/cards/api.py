@@ -4,6 +4,7 @@ API for the cards project
 from dataclasses import asdict
 from dataclasses import dataclass
 from dataclasses import field
+import pathlib
 
 from .db import DB
 
