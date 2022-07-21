@@ -5,8 +5,8 @@ def test_db():
     db = DB()
 
     result = db.some_action()
-    assert result == 42
 
     # teardown: close db
     db.close()
 
+    assert result == 42
