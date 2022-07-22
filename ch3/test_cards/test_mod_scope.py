@@ -1,33 +1,32 @@
-from pathlib import Path
+import pathlib
+import pytest
 from tempfile import TemporaryDirectory
 import cards
-import pytest
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def cards_db():
-    # setup
     with TemporaryDirectory() as db_dir:
-        db_path = Path(db_dir)
+        # setup
+        db_path = pathlib.Path(db_dir)
         db = cards.CardsDB(db_path)
-        yield db
+
+        yield db 
+
         # teardown
         db.close()
 
+
+
 def test_empty(cards_db):
     # GIVEN an empty database
-    # WHEN count() is called
     count = cards_db.count()
-    # THEN count is 0
     assert count == 0
 
-def test_non_empty(cards_db):
-    # GIVEN a database with 2 cards
-    c1 = cards.Card("do something", "brian")
-    c2 = cards.Card("something else", "brian")
-    cards_db.add_card(c1)
-    cards_db.add_card(c2)
+
+def test_one_item(cards_db):
+    # GIVEN a database with 1 item
+    cards_db.add_card(cards.Card("something"))
     # WHEN count() is called
     count = cards_db.count()
-    # THEN count is 2
-    assert count == 2
-
+    # THEN count returns 1
+    assert count == 1
