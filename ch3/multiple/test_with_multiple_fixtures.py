@@ -12,7 +12,7 @@ def bar(foo):
 def baz(foo, bar):
     return "BAZ"
 
-def test_muli(foo, bar, baz):
+def test_multi(foo, bar, baz):
     print(f"{foo=}")
     print(f"{bar=}")
     print(f"{baz=}")

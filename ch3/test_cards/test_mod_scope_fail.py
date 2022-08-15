@@ -26,4 +26,5 @@ def test_one_item(cards_db):
 def test_empty(cards_db):
     # GIVEN an empty database
     count = cards_db.count()
+    # THEN count returns 0
     assert count == 0
