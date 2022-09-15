@@ -1,5 +1,6 @@
 from some_db import DB
 
+
 def test_db():
     # setup: connect to db
     db = DB()
