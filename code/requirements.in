@@ -10,3 +10,6 @@
 # Direct dependencies for our code:
 
 pytest
+pytest-repeat
+pytest-xdist
+pytest-randomly
