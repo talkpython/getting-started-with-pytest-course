@@ -1,16 +1,19 @@
 import pytest
 from cards import Card
 
+
 def id_func(x):
     return f"{x[0]}-{x[1]}"
 
-@pytest.fixture(params=[ 
+
+@pytest.fixture(params=[
     ("one", "todo"),
     ("two", "in prog"),
     ("three", "done")],
     ids=id_func)
 def state_summary(request):
     return request.param
+
 
 def test_finish(cards_db, state_summary):
     start_state, start_summary = state_summary

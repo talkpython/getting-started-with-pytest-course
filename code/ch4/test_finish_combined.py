@@ -1,7 +1,8 @@
 from cards import Card
 
+
 def test_finish(cards_db):
-    for c in [ 
+    for c in [
         Card("one", state="todo"),
         Card("two", state="in prog"),
         Card("three", state="done"),

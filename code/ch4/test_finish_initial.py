@@ -1,5 +1,6 @@
 from cards import Card
 
+
 # states are "todo", "in prog", "done"
 
 def test_finish_in_prog(cards_db):
