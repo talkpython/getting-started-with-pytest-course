@@ -1,5 +1,7 @@
-import pytest
 from contextlib import closing
+
+import pytest
+
 from some_db import DB
 
 

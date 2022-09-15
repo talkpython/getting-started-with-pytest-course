@@ -1,7 +1,9 @@
 import pathlib
-import pytest
 from tempfile import TemporaryDirectory
+
 import cards
+import pytest
+
 
 @pytest.fixture(scope="module")
 def cards_db_module():
@@ -9,14 +11,16 @@ def cards_db_module():
         # setup
         db_path = pathlib.Path(db_dir)
         db = cards.CardsDB(db_path)
-        yield db 
+        yield db
         # teardown
         db.close()
+
 
 @pytest.fixture(scope="function")
 def cards_db(cards_db_module):
     cards_db_module.delete_all()
     return cards_db_module
+
 
 def test_one_item(cards_db):
     # GIVEN a database with 1 item

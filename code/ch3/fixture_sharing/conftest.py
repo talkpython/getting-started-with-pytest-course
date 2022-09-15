@@ -1,7 +1,9 @@
 import pathlib
-import pytest
 from tempfile import TemporaryDirectory
+
 import cards
+import pytest
+
 
 @pytest.fixture(scope="session")
 def cards_db_session():
@@ -12,9 +14,10 @@ def cards_db_session():
         # setup
         db_path = pathlib.Path(db_dir)
         db = cards.CardsDB(db_path)
-        yield db 
+        yield db
         # teardown
         db.close()
+
 
 @pytest.fixture(scope="function")
 def cards_db(cards_db_session):

@@ -1,4 +1,5 @@
 from contextlib import closing
+
 from some_db import DB
 
 

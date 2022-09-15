@@ -1,4 +1,5 @@
 import pytest
+
 from some_db import DB
 
 

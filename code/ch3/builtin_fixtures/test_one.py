@@ -1,5 +1,6 @@
 import cards
 
+
 def test_one_item(cards_db):
     # GIVEN a database with 1 item
     cards_db.add_card(cards.Card("something"))

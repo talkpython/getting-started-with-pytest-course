@@ -1,6 +1,8 @@
 import pathlib
 from tempfile import TemporaryDirectory
+
 import cards
+
 
 def test_empty():
     # GIVEN an empty database
@@ -13,6 +15,7 @@ def test_empty():
         db.close()
         # THEN count returns 0
         assert count == 0
+
 
 def test_one_item():
     # GIVEN a database with 1 item
