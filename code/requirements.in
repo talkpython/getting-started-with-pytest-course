@@ -1,1 +1,12 @@
+# This file generates our requirements.txt with pinned versions for stability and
+# consistency with the video course.
+#
+# If you want to update your requirements to the latest version, use pip-tools:
+#
+# Step 1: pip install pip-tools
+# Step 2: pip-compile requirements.in --upgrade
+#
+
+# Direct dependencies for our code:
+
 pytest

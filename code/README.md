@@ -6,4 +6,8 @@ However, we have included a `requirements.txt` file so you can get all the depen
 
 Just create a virtual environment (`python3 -m venv venv --prompt .`) and activate it (`. venv/bin/activate` on macOS and Linux or `venv\scripts\activate.bat` on Windows). Then install the requirements (`pip install -r requirements.txt`).
 
-You also need to install the **cards** project. With the virtual environment active
+You also need to install the **cards** project. With the virtual environment active and in this folder containing this readme.md, run:
+
+```bash
+pip install ./cards_proj
+```
