@@ -1,7 +1,9 @@
 from cards import Card
 
+
 def test_foo():
     pass
+
 
 class TestEquality:
 
