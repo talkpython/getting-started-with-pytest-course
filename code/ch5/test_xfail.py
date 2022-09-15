@@ -1,7 +1,8 @@
+import cards
 import pytest
 from cards import Card
-from packaging.version import parse 
-import cards
+from packaging.version import parse
+
 
 @pytest.mark.xfail(
     parse(cards.__version__).major < 2,
@@ -11,11 +12,13 @@ def test_less_than():
     c2 = Card("b task")
     assert c1 < c2
 
+
 @pytest.mark.xfail(reason="XPASS demo")
 def test_xpass():
     c1 = Card("a task")
     c2 = Card("a task")
     assert c1 == c2
+
 
 @pytest.mark.xfail(reason="XPASS demo", strict=True)
 def test_xpass_strict():
